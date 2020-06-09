@@ -57,7 +57,7 @@ body {
 .dropdown:hover .dropbtn {background: url('images/denim.png');}
 
 .hello{
-  font-size: 6em;
+  font-size: 5.5em;
   color: white;
   font-family: 'courier_prime_coderegular';
   text-align: center;
