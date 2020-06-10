@@ -73,6 +73,7 @@ body {
 .blog{
   padding-top: 50px;
   font-size: 1.1em;
+  padding: inherit;
   font-family:'droid_sansregular';
   color: white;
   padding-bottom: 50px;
