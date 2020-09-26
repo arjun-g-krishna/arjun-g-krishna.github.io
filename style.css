@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&family=Sail&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.accent {
+  color: #0075ff;
+}
+
+.container {
+  margin: 0 5rem;
+}
+
+nav {
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 3rem;
+}
+
+.brand {
+  font-family: 'Sail', cursive;
+  font-size: 2rem;
+}
+
+.faced {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 89vh;
+}
+
+.faced .greeting {
+  font-weight: 900;
+  font-size: 5rem;
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+}
+
+.faced .greeting .unimp {
+  display: block;
+  font-weight: 800;
+}
+
+.faced .greeting .link-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0075ff;
+  color: #1a1a1a;
+  border: 0;
+  border-radius: 100px;
+  padding: 20px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: 'Poppins';
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.faced .greeting .link-btn:focus {
+  outline: none;
+}
+
+.faced .greeting .link-btn:hover {
+  background-color: #fff;
+}
+
+.faced .greeting .link-btn svg {
+  margin-left: 5px;
+}
+
+.faced img {
+  margin-left: 1rem;
+}

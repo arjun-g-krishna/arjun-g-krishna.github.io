@@ -1,3 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&family=Sail&display=swap');
+
+$primary-color: #1a1a1a;
+$text-color: #fff;
+$accent-color: #0075ff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    background-color: red;
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+.accent {
+    color: $accent-color;
+}
+.container {
+    margin: 0 5rem;
+}
+nav {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        list-style: none;
+        li {
+            margin-left: 3rem;
+        }
+    }
+}
+.brand {
+    font-family: 'Sail', cursive;
+    font-size: 2rem;
+}
+
+.faced {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 89vh;
+    .greeting {
+        font-weight: 900;
+        font-size: 5rem;
+        transform: translateY(-5rem);
+        .unimp {
+            display: block;
+            font-weight: 800;
+        }
+        .link-btn {
+            display: flex;
+            align-items: center;
+            background-color: $accent-color;
+            color: $primary-color;
+            border: 0;
+            border-radius: 100px;
+            padding: 20px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-family: 'Poppins';
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                background-color: $text-color;
+            }
+            svg {
+                margin-left: 5px;
+            }
+        }
+    }
+    img {
+        margin-left: 1rem;
+    }
 }
