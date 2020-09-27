@@ -8,11 +8,17 @@ $accent-color: #0075ff;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: none;
 }
 body {
     background-color: $primary-color;
     color: $text-color;
     font-family: 'Poppins', sans-serif;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+section {
+    scroll-snap-align: start;
 }
 a {
     text-decoration: none;
@@ -58,7 +64,7 @@ nav {
             display: flex;
             align-items: center;
             background-color: $accent-color;
-            color: $primary-color;
+            color: $text-color;
             border: 0;
             border-radius: 100px;
             padding: 20px;
@@ -71,6 +77,7 @@ nav {
                 outline: none;
             }
             &:hover {
+                color: $primary-color;
                 background-color: $text-color;
             }
             svg {
@@ -80,5 +87,182 @@ nav {
     }
     img {
         margin-left: 1rem;
+    }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    h1 {
+        font-size: 3rem;
+    }
+    .content {
+        width: 40vw;
+        p {
+            line-height: 1.5;
+        }
+    }
+    img {
+        height: 20vw;
+        margin-right: 70px;
+    }
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font-size: 3rem;
+        margin: 0 auto 5rem auto;
+    }
+    ul {
+        display: flex;
+        list-style-type: none;
+        font-size: 2rem;
+        li {
+            margin-right: 6rem;
+        }
+        :last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 3rem;
+        margin: 0 auto 5rem auto;
+    }
+    ul {
+        display: flex;
+        list-style-type: none;
+        font-size: 2rem;
+
+        li {
+            margin-right: 6rem;
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        :last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 0 2rem;
+    }
+    nav {
+        ul {
+            display: none;
+            list-style: none;
+            li {
+                margin-left: 3rem;
+            }
+        }
+    }
+    .brand {
+        font-family: 'Sail', cursive;
+        font-size: 2rem;
+    }
+
+    .faced {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 89vh;
+        text-align: center;
+        .greeting {
+            font-weight: 900;
+            font-size: 3rem;
+            transform: translateY(-5rem);
+            position: relative;
+            .unimp {
+                display: block;
+                font-weight: 800;
+                font-size: 2rem;
+            }
+            .link-btn {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        img {
+            display: none;
+        }
+    }
+
+    .about {
+        justify-content: center;
+        height: auto;
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .content {
+            width: 70vw;
+            p {
+                text-align: justify;
+            }
+        }
+        img {
+            display: none;
+        }
+    }
+
+    .skill {
+        height: auto;
+        margin-top: 30vh;
+        h1 {
+            font-size: 2rem;
+        }
+        ul {
+            flex-direction: column;
+            font-size: 2rem;
+            text-align: center;
+            li {
+                margin-right: 0;
+                margin-bottom: 3rem;
+            }
+            :last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .contact {
+        height: 100vh;
+        h1 {
+            font-size: 2rem;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                text-align: center;
+                margin-right: 0rem;
+                margin-bottom: 2rem;
+            }
+            :last-child {
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
     }
 }
