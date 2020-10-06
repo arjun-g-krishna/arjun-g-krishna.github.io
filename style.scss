@@ -28,7 +28,7 @@ a {
     color: $accent-color;
 }
 .container {
-    margin: 0 5rem;
+    margin: 0 8rem;
 }
 nav {
     margin: 2rem auto;
@@ -162,17 +162,14 @@ nav {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
     .container {
         margin: 0 2rem;
     }
     nav {
+        justify-content: center;
         ul {
             display: none;
-            list-style: none;
-            li {
-                margin-left: 3rem;
-            }
         }
     }
     .brand {
@@ -188,17 +185,19 @@ nav {
         text-align: center;
         .greeting {
             font-weight: 900;
-            font-size: 3rem;
+            font-size: 3.5rem;
             transform: translateY(-5rem);
             position: relative;
             .unimp {
                 display: block;
                 font-weight: 800;
                 font-size: 2rem;
+                line-height: 0.8;
             }
             .link-btn {
                 position: absolute;
                 left: 50%;
+                height: 60px;
                 transform: translateX(-50%);
             }
         }

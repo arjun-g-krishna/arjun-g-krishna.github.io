@@ -30,7 +30,7 @@ a {
 }
 
 .container {
-  margin: 0 5rem;
+  margin: 0 8rem;
 }
 
 nav {
@@ -235,16 +235,17 @@ nav ul li {
   margin-right: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   .container {
     margin: 0 2rem;
   }
+  nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   nav ul {
     display: none;
-    list-style: none;
-  }
-  nav ul li {
-    margin-left: 3rem;
   }
   .brand {
     font-family: 'Sail', cursive;
@@ -265,7 +266,7 @@ nav ul li {
   }
   .faced .greeting {
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 3.5rem;
     -webkit-transform: translateY(-5rem);
             transform: translateY(-5rem);
     position: relative;
@@ -274,10 +275,12 @@ nav ul li {
     display: block;
     font-weight: 800;
     font-size: 2rem;
+    line-height: 0.8;
   }
   .faced .greeting .link-btn {
     position: absolute;
     left: 50%;
+    height: 60px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
@@ -351,6 +354,3 @@ nav ul li {
     margin-bottom: 0;
   }
 }
-
-
-/*# sourceMappingURL=/style.e308ff8e.css.map */
