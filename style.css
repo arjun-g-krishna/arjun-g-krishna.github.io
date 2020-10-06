@@ -117,8 +117,13 @@ nav ul li {
   margin-left: 5px;
 }
 
-.faced img {
-  margin-left: 1rem;
+.faced .prof-card {
+  border-radius: 1rem;
+  width: 25rem;
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+  -webkit-box-shadow: 0px 154px 121px rgba(0, 117, 255, 0.07), 0px 24.7279px 19.4291px rgba(0, 117, 255, 0.0377964), 0px 14.8996px 11.7069px rgba(0, 117, 255, 0.0322036), 0px 8.29709px 6.51914px rgba(0, 117, 255, 0.0261253), 0px 3.56852px 2.80384px rgba(0, 117, 255, 0.0180827);
+          box-shadow: 0px 154px 121px rgba(0, 117, 255, 0.07), 0px 24.7279px 19.4291px rgba(0, 117, 255, 0.0377964), 0px 14.8996px 11.7069px rgba(0, 117, 255, 0.0322036), 0px 8.29709px 6.51914px rgba(0, 117, 255, 0.0261253), 0px 3.56852px 2.80384px rgba(0, 117, 255, 0.0180827);
 }
 
 .about {
@@ -255,20 +260,24 @@ nav ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     height: 89vh;
     text-align: center;
   }
   .faced .greeting {
     font-weight: 900;
-    font-size: 3.5rem;
-    -webkit-transform: translateY(-5rem);
-            transform: translateY(-5rem);
+    font-size: 3rem;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
     position: relative;
   }
   .faced .greeting .unimp {
@@ -284,8 +293,12 @@ nav ul li {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  .faced img {
-    display: none;
+  .faced .prof-card {
+    width: 12rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
   }
   .about {
     -webkit-box-pack: center;
