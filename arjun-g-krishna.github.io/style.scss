@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&family=Sail&display=swap');
+
+$primary-color: #1a1a1a;
+$text-color: #fff;
+$accent-color: #0075ff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: none;
+}
+body {
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: 'Poppins', sans-serif;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+section {
+    scroll-snap-align: start;
+}
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+.accent {
+    color: $accent-color;
+}
+.container {
+    margin: 0 8rem;
+}
+nav {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        list-style: none;
+        li {
+            margin-left: 3rem;
+        }
+    }
+}
+.brand {
+    font-family: 'Sail', cursive;
+    font-size: 2rem;
+}
+
+.faced {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 89vh;
+    .greeting {
+        font-weight: 900;
+        font-size: 5rem;
+        transform: translateY(-5rem);
+        .unimp {
+            display: block;
+            font-weight: 800;
+        }
+        .link-btn {
+            display: flex;
+            align-items: center;
+            background-color: $accent-color;
+            color: $text-color;
+            border: 0;
+            border-radius: 100px;
+            padding: 20px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-family: 'Poppins';
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                color: $primary-color;
+                background-color: $text-color;
+            }
+            svg {
+                margin-left: 5px;
+            }
+        }
+    }
+    .prof-card {
+        border-radius: 1rem;
+        width: 25rem;
+        transform: translateY(-5rem);
+        box-shadow: 0px 154px 121px rgba(0, 117, 255, 0.07),
+            0px 24.7279px 19.4291px rgba(0, 117, 255, 0.0377964),
+            0px 14.8996px 11.7069px rgba(0, 117, 255, 0.0322036),
+            0px 8.29709px 6.51914px rgba(0, 117, 255, 0.0261253),
+            0px 3.56852px 2.80384px rgba(0, 117, 255, 0.0180827);
+    }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    h1 {
+        font-size: 3rem;
+    }
+    .content {
+        width: 40vw;
+        p {
+            line-height: 1.5;
+        }
+    }
+    img {
+        height: 20vw;
+        margin-right: 70px;
+    }
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font-size: 3rem;
+        margin: 0 auto 5rem auto;
+    }
+    ul {
+        display: flex;
+        list-style-type: none;
+        font-size: 2rem;
+        li {
+            margin-right: 6rem;
+        }
+        :last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 3rem;
+        margin: 0 auto 5rem auto;
+    }
+    ul {
+        display: flex;
+        list-style-type: none;
+        font-size: 2rem;
+
+        li {
+            margin-right: 6rem;
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        :last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        margin: 0 2rem;
+    }
+    nav {
+        justify-content: center;
+        ul {
+            display: none;
+        }
+    }
+    .brand {
+        font-family: 'Sail', cursive;
+        font-size: 2rem;
+    }
+
+    .faced {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        height: 89vh;
+        text-align: center;
+        .greeting {
+            font-weight: 900;
+            font-size: 3rem;
+            transform: translateY(0rem);
+            position: relative;
+            .unimp {
+                display: block;
+                font-weight: 800;
+                font-size: 2rem;
+                line-height: 0.8;
+            }
+            .link-btn {
+                position: absolute;
+                left: 50%;
+                height: 60px;
+                transform: translateX(-50%);
+            }
+        }
+        .prof-card {
+            width: 12rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+            transform: translateY(0rem);
+        }
+    }
+
+    .about {
+        justify-content: center;
+        height: auto;
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .content {
+            width: 70vw;
+            p {
+                text-align: justify;
+            }
+        }
+        img {
+            display: none;
+        }
+    }
+
+    .skill {
+        height: auto;
+        margin-top: 30vh;
+        h1 {
+            font-size: 2rem;
+        }
+        ul {
+            flex-direction: column;
+            font-size: 2rem;
+            text-align: center;
+            li {
+                margin-right: 0;
+                margin-bottom: 3rem;
+            }
+            :last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .contact {
+        height: 100vh;
+        h1 {
+            font-size: 2rem;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                text-align: center;
+                margin-right: 0rem;
+                margin-bottom: 2rem;
+            }
+            :last-child {
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
